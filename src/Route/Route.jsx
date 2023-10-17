@@ -6,6 +6,8 @@ import Login from "../Pages/Login/Login";
 import Home from "../Pages/Home/Home";
 import Errorpage from "../Pages/ErrorPage/Errorpage";
 import Root from "../MainLayout/Root";
+import AddProduct from "../Pages/AddProduct/AddProduct";
+import Mycart from "../Pages/MyCart/Mycart";
 
   const myCreatedRoute = createBrowserRouter([
     {
@@ -16,7 +18,6 @@ import Root from "../MainLayout/Root";
         {
           path: "/",
           element: <Home></Home>,
-          loader: () => fetch("/event.json"),
         },
         {
           path: "/login",
@@ -25,6 +26,14 @@ import Root from "../MainLayout/Root";
         {
           path: "/register",
           element: <Register></Register>,
+        },
+        {
+          path: "/addProduct",
+          element: <AddProduct></AddProduct>,
+        },
+        {
+          path: "/myCart",
+          element:<Mycart></Mycart>,
         },
       ],
     },
