@@ -9,6 +9,7 @@ import Root from "../MainLayout/Root";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import Mycart from "../Pages/MyCart/Mycart";
 import BrandsProduct from "../Components/BrandsProduct/BrandsProduct";
+import UpdateProduct from "../Components/UpdateProduct/UpdateProduct";
 
   const myCreatedRoute = createBrowserRouter([
     {
@@ -38,6 +39,11 @@ import BrandsProduct from "../Components/BrandsProduct/BrandsProduct";
         {
           path: "/addProduct",
           element: <AddProduct></AddProduct>,
+
+        },
+        {
+          path: "/updateProduct",
+          element: <UpdateProduct></UpdateProduct>,
         },
         {
           path: "/myCart",
