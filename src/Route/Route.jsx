@@ -11,6 +11,7 @@ import Mycart from "../Pages/MyCart/Mycart";
 import BrandsProduct from "../Components/BrandsProduct/BrandsProduct";
 import UpdateProduct from "../Components/UpdateProduct/UpdateProduct";
 import PrivateRoute from "./PrivateRoute";
+import ProductDetails from "../Components/BrandsProduct/productDetails";
 
   const myCreatedRoute = createBrowserRouter([
     {
@@ -49,6 +50,10 @@ import PrivateRoute from "./PrivateRoute";
         {
           path: "/myCart",
           element:<PrivateRoute><Mycart></Mycart></PrivateRoute>,
+        },
+        {
+          path: "/productDetails",
+          element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
         },
       ],
     },
