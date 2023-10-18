@@ -8,6 +8,7 @@ import Errorpage from "../Pages/ErrorPage/Errorpage";
 import Root from "../MainLayout/Root";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import Mycart from "../Pages/MyCart/Mycart";
+import BrandsProduct from "../Components/BrandsProduct/BrandsProduct";
 
   const myCreatedRoute = createBrowserRouter([
     {
@@ -18,7 +19,14 @@ import Mycart from "../Pages/MyCart/Mycart";
         {
           path: "/",
           element: <Home></Home>,
+          loader : ()=> fetch('/brands.json'),
         },
+        {
+          path: "/brandsProduct/:id",
+          element: <BrandsProduct></BrandsProduct>,
+          loader : ()=> fetch('/brands.json'),
+        },
+
         {
           path: "/login",
           element: <Login></Login>,

@@ -5,7 +5,7 @@ import Navber from "../Components/Header/Navbar/Navber";
 
 const Root = () => {
     return (
-        <div  className="bg-base-200">
+        <div  className="font-gabarito  bg-base-200">
            
            <Navber></Navber>
             <Outlet></Outlet>
