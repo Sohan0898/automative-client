@@ -53,14 +53,14 @@ const Register = () => {
       <section className="relative py-10 bg-gray-900 sm:py-16 lg:py-24">
         <div className="absolute inset-0">
           <img
-            className="object-cover opacity-50 blur-sm      w-full h-full"
+            className="object-cover opacity-50 blur-sm w-full h-full"
             src="https://i.ibb.co/30X8yBt/dan-gold-N7-Ri-Dzf-F2iw-unsplash.jpg"
             alt=""
           />
         </div>
         <div className="absolute inset-0 bg-gray-900/20"></div>
 
-        <div className="relative max-w-lg px-8 md:px-4 mx-auto ">
+        <div className="relative max-w-xl px-8 md:px-4 mx-auto ">
           <div className="overflow-hidden bg-white rounded-md shadow-md">
             <div className="px-4 py-6 sm:px-8 sm:py-7">
               <div className="text-center">
@@ -71,7 +71,7 @@ const Register = () => {
                   Already joined?{" "}
                   <Link to={"/login"}>
                     <span className="text-FusionRed transition-all duration-200 hover:underline hover:text-red-700">
-                      Sing in now
+                      Sign in now
                     </span>
                   </Link>
                 </p>

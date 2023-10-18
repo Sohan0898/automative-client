@@ -34,8 +34,8 @@ const Navber = () => {
   );
 
   return (
-    <div className=" max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 my-4 py-2">
-      <div className="navbar bg-base-100 gap-20">
+    <div className=" max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 ">
+      <div className="navbar bg-base-200 gap-20">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -72,7 +72,7 @@ const Navber = () => {
               <>
                 <label
                   tabIndex={0}
-                  className="btn btn-ghost btn-circle avatar ring ring-amber-500 online  "
+                  className="btn btn-ghost btn-circle avatar ring ring-FusionRed online  "
                 >
                   <div className="w-10 rounded-full">
                     {user.photoURL ? (
@@ -99,16 +99,16 @@ const Navber = () => {
 
                   <a
                     onClick={handleLogOut}
-                    className="btn focus:outline-none font-bold bg-amber-500 hover:bg-amber-500  focus:ring-amber-500 w-full rounded-lg  px-5 py-2 mr-2 mb-2"
+                    className="btn text-white focus:outline-none font-bold bg-FusionRed hover:bg-FusionRed  focus:ring-FusionRed w-full rounded-lg  px-5 py-2 mr-2 mb-2"
                   >
-                    Logout
+                    Sign out
                   </a>
                 </ul>
               </>
             ) : (
               <Link to={"/login"}>
-                <button className="btn focus:outline-none font-bold bg-amber-500 hover:bg-amber-500  focus:ring-amber-500  rounded-lg  px-5 py-2 mr-2 mb-2">
-                  Login
+                <button className="btn focus:outline-none text-white  font-bold bg-FusionRed hover:bg-FusionRed  focus:ring-FusionRed  rounded-lg  px-5 py-2 mr-2 mb-2">
+                  Sign In
                 </button>
               </Link>
             )}

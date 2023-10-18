@@ -5,7 +5,7 @@ import Navber from "../Components/Header/Navbar/Navber";
 
 const Root = () => {
     return (
-        <div>
+        <div  className="bg-base-200">
            
            <Navber></Navber>
             <Outlet></Outlet>

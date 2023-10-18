@@ -169,7 +169,7 @@ const Login = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center px-6 py-12 bg-base-200 lg:px-8 lg:py-24">
+          <div className="flex items-center justify-center px-6 py-12 bg-base-300 lg:px-8 lg:py-24">
             <div className="xl:w-full xl:max-w-sm 2xl:max-w-md xl:mx-auto ">
               <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
                 Sign in to Fusion<span className="text-FusionRed">X</span>
