@@ -1,6 +1,60 @@
+import Swal from "sweetalert2";
 
 
 const AddProduct = () => {
+
+    const handleAddProduct = event => {
+        event.preventDefault();
+    
+        const form = event.target;
+    
+        const image = form.image.value;
+        const name = form.name.value;
+        const brand = form.brand.value;
+        const type = form.type.value;
+        const price = form.price.value;
+        const description = form.description.value;
+        const rating = form.rating.value;
+        
+    
+        const newProduct = {
+           image,
+           name,
+           brand,
+           type,
+           price,
+           description,
+           rating
+
+        };
+    
+        console.log(newProduct);
+    
+        fetch("http://localhost:5000/products", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(newProduct),
+        })
+    
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your product has been added',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+               
+            }
+        })
+        
+      };
+
     return (
         <div>
             <section className="py-10 bg-white sm:py-16 lg:py-24">
@@ -17,7 +71,7 @@ const AddProduct = () => {
                 <div className="px-6 py-12 sm:p-12">
                     <h3 className="text-3xl font-semibold text-center text-FusionRed">Add Your Available Product</h3>
 
-                    <form className="mt-14">
+                    <form onSubmit={handleAddProduct} className="mt-14">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
                             <div>
                                 <label  className="text-base font-medium text-gray-900"> Image</label>
@@ -58,7 +112,7 @@ const AddProduct = () => {
                                     <input type="text" name="description" id="" placeholder="Enter your product description" className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600" />
                                 </div>
                             </div>
-                            <div className="col-span-2">
+                            <div className="md:col-span-2">
                                 <label  className="text-base font-medium text-gray-900"> Rating</label>
                                 <div className="mt-2.5 relative">
                                     <input type="text" name="rating" id="" placeholder="Enter your rating" className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600" />

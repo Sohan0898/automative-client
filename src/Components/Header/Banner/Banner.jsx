@@ -10,7 +10,7 @@ const Banner = () => {
             "url(https://i.ibb.co/txV99GD/blake-meyer-CRNb-Hj-Naljo-unsplash.jpg)",
         }}
       >
-        <div className="hero-overlay bg-gradient-to-b from-[#12121200]  to-[#161616] "></div>
+        <div className="hero-overlay bg-gradient-to-b from-[#12121200] to-[#111111] bg-opacity-40 "></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="">
             
@@ -19,15 +19,15 @@ const Banner = () => {
               Fusion<span className="text-FusionRed">X</span> : <br />
               Your Automotive Car Destination
             </h1>
-            <p className="mb-5 text-FusionGray max-w-xl mx-auto">
+            <p className="mb-5 text-gray-400 max-w-xl mx-auto">
               Discover automotive excellence at FusionX. Explore the latest
               innovations in electric, luxury, and high-performance cars.
               Elevate your driving experience today.
             </p>
             <button
-              className="mx-auto flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-FusionRed transition-all hover:bg-FusionRed/10 active:bg-FusionRed/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              className="mx-auto flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-amber-500 transition-all hover:bg-FusionRed/10 active:bg-FusionRed/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button"
-              data-ripple-dark="true"
+              data-ripple-dark="<BrandsProduct></BrandsProduct>"
             >
               Explore FusionX
               <svg
