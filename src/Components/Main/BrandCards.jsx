@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 const BrandCards = ({brands}) => {
 
+
     const {brand, image_url } = brands;
+
     return (
         <div className="">
             <Link to={`/brandsProduct/${brand}`}><div className="card  bg-base-200 border-red-200  border-2 shadow-lg p-5 ">

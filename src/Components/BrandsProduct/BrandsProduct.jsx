@@ -1,12 +1,15 @@
 
 import Slider from "./Slider";
 import ProductCard from "./ProductCard";
-import { useParams } from "react-router-dom";
+import { useLoaderData} from "react-router-dom";
 
 const BrandsProduct = () => {
 
-const product = useParams();
+const product = useLoaderData();
 
+// console.log(product);
+
+  
   return (
     <div className=" ">
       <div className="max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 mt-10  ">
@@ -17,7 +20,7 @@ const product = useParams();
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div className="text-center">
               <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-                Available cars are shown here
+                {product.length} Cars are available here
               </h2>
 
               <div className="flex flex-col items-center justify-center px-16 mt-8 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex-row lg:mt-12 sm:px-0">
@@ -59,9 +62,9 @@ const product = useParams();
         </section>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4 max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 my-10">
-         
-      <h1>name : {product.name}</h1>
-      <ProductCard></ProductCard>
+      {
+        product?.map(product =><ProductCard key={product._id} product={product} ></ProductCard>)
+      }
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ const UpdateProduct = () => {
     rating
 
   } = product;
+  console.log(product);
 
   const handleUpdateProduct = event => {
     event.preventDefault();
@@ -40,12 +41,13 @@ const UpdateProduct = () => {
 
     console.log(updateProduct);
 
-    fetch(`http://localhost:5000/products/${_id}`, {
+    fetch(`http://localhost:5000/products/brand/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(updateProduct),
+      
     })
 
     .then(res => res.json())
@@ -85,7 +87,7 @@ const UpdateProduct = () => {
             <div className="mt-6 overflow-hidden bg-white rounded-xl">
               <div className="px-6 py-12 sm:p-12">
                 <h3 className="text-3xl font-semibold text-center text-FusionRed">
-                  Updaye Your Available Product
+                  Update Your Available Product
                 </h3>
 
                 <form onSubmit={handleUpdateProduct} className="mt-14">

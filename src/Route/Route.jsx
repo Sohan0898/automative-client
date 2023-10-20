@@ -27,7 +27,7 @@ import ProductDetails from "../Components/BrandsProduct/productDetails";
         },
         {
           path: "/brandsProduct/:brand",
-          element: <PrivateRoute><BrandsProduct></BrandsProduct></PrivateRoute>,
+          element: <BrandsProduct></BrandsProduct>,
           loader : ({params})=> fetch(`http://localhost:5000/products/${params.brand}`),
         },
 
@@ -47,14 +47,14 @@ import ProductDetails from "../Components/BrandsProduct/productDetails";
         {
           path: "/updateProduct/:id",
           element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-          loader : ({params})=> fetch(`http://localhost:5000/products/${params.id}`)
+          loader : ({params})=> fetch(`http://localhost:5000/products/brand/${params.id}`)
         },
         {
           path: "/myCart",
           element:<PrivateRoute><Mycart></Mycart></PrivateRoute>,
         },
         {
-          path: "/productDetails",
+          path: "/productDetails/:id",
           element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
         },
       ],
