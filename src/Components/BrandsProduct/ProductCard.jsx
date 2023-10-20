@@ -18,7 +18,7 @@ const ProductCard = ({product}) => {
           </figure>
           <div className="card-body items-center text-center">
           <h2 className=" text-FusionBlue  font-bold text-xl h-[60px]   ">{name}</h2>
-            <div className="flex justify-between text-FusionDark gap-16  w-full">
+            <div className="flex justify-between text-FusionDark gap-4 w-full">
               <p><span data-tip="Brand" className="badge badge-outline badge-error tooltip tooltip-error  text-gray-500">{brand}</span> </p>
               <p><span data-tip="Type" className="badge badge-outline badge-accent tooltip tooltip-accent text-gray-500">{type}</span></p>
             </div>

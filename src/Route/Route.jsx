@@ -56,6 +56,7 @@ import ProductDetails from "../Components/BrandsProduct/productDetails";
         {
           path: "/productDetails/:id",
           element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+          loader : ({params})=> fetch(`http://localhost:5000/products/brand/${params.id}`)
         },
       ],
     },

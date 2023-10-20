@@ -61,11 +61,17 @@ const product = useLoaderData();
           </div>
         </section>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4 max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 my-10">
-      {
-        product?.map(product =><ProductCard key={product._id} product={product} ></ProductCard>)
-      }
-      </div>
+      
+      {product.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4 max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 my-10">
+          {product.map((product) => (
+            <ProductCard key={product._id} product={product}></ProductCard>
+          ))}
+          </div> )  : (
+          <div className="min-h-[40vh] w-auto text-center">
+            <img className="h-[400px] mx-auto" src="https://i.ibb.co/Fx7ZLsB/Untitled-design-1.png" alt="" />
+            <p className="text-2xl lg:text-4xl font-bold pb-14 ">Products are not available right now!!! </p></div>
+        )}
+      
     </div>
   );
 };
