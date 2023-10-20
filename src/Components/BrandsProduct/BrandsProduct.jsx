@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+
 import Slider from "./Slider";
+import ProductCard from "./ProductCard";
+import { useParams } from "react-router-dom";
 
 const BrandsProduct = () => {
+
+const product = useParams();
+
   return (
     <div className=" ">
-      <div className="max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 mt-10  "><Slider></Slider></div>
+      <div className="max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 mt-10  ">
+        <Slider></Slider>
+      </div>
       <div>
         <section className="py-10 bg-base-100 sm:py-16 lg:py-24">
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -51,33 +58,10 @@ const BrandsProduct = () => {
           </div>
         </section>
       </div>
-      <div className="max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 my-10   grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4">
-        <div className="card  bg-base-100 shadow">
-          <figure className="px-10 pt-10">
-            <img
-              src="https://i.ibb.co/HG50V89/pexels-jdlr-photography-17377920.jpg"
-              alt="Shoes"
-              className="rounded-xl"
-            />
-          </figure>
-          <div className="card-body items-center text-center">
-          <h2 className=" text-FusionBlue font-racing text-2xl font-medium">Mclearn-sereis-100</h2>
-            <div className="flex justify-between text-FusionDark gap-10 mt-4">
-              <p>Brand : <span className="text-gray-500">Mclearn</span> </p>
-              <p>Type : <span className="text-gray-500">Super Car</span></p>
-            </div>
-            <div className="flex justify-between  text-FusionDark gap-10 mb-4">
-              <p>Price : <span className="text-gray-500">12290 $</span></p>
-              <p>Rating : <span className="text-gray-500">4.5</span></p>
-            </div>
-            
-            <div className="card-actions">
-            <Link to={'/updateProduct'}><button className="btn bg-FusionRed hover:bg-red-700 text-white">Update</button></Link>
-            <Link to={'/productDetails'}><button className="btn bg-amber-500 hover:bg-amber-700 text-white">Details</button></Link>
-          </div>
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4 max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 my-10">
          
-        </div>
+      <h1>name : {product.name}</h1>
+      <ProductCard></ProductCard>
       </div>
     </div>
   );

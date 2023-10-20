@@ -22,12 +22,13 @@ import ProductDetails from "../Components/BrandsProduct/productDetails";
         {
           path: "/",
           element: <Home></Home>,
-          loader : ()=> fetch('/brands.json'),
+          loader : ()=> fetch('http://localhost:5000/brands'),
+          
         },
         {
-          path: "/brandsProduct/:id",
+          path: "/brandsProduct/:brand",
           element: <PrivateRoute><BrandsProduct></BrandsProduct></PrivateRoute>,
-          loader : ()=> fetch('/brands.json'),
+          loader : ({params})=> fetch(`http://localhost:5000/products/${params.brand}`),
         },
 
         {
@@ -44,8 +45,9 @@ import ProductDetails from "../Components/BrandsProduct/productDetails";
 
         },
         {
-          path: "/updateProduct",
+          path: "/updateProduct/:id",
           element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
+          loader : ({params})=> fetch(`http://localhost:5000/products/${params.id}`)
         },
         {
           path: "/myCart",

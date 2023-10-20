@@ -1,4 +1,71 @@
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+
 const UpdateProduct = () => {
+
+  const product = useLoaderData();
+  const {
+    _id,
+    name,
+    image,
+    brand,
+    type,
+    price,
+    rating
+
+  } = product;
+
+  const handleUpdateProduct = event => {
+    event.preventDefault();
+
+    const form = event.target;
+
+    const image = form.image.value;
+    const name = form.name.value;
+    const brand = form.brand.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    
+
+    const updateProduct = {
+       image,
+       name,
+       brand,
+       type,
+       price,
+       rating
+
+    };
+
+    console.log(updateProduct);
+
+    fetch(`http://localhost:5000/products/${_id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(updateProduct),
+    })
+
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        if(data.modifiedCount){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your product has been added',
+                showConfirmButton: false,
+                timer: 1500
+              })
+           
+        }
+    })
+    
+  };
+
+
   return (
     <div>
       <section className="py-10 bg-white sm:py-16 lg:py-24">
@@ -21,7 +88,7 @@ const UpdateProduct = () => {
                   Updaye Your Available Product
                 </h3>
 
-                <form className="mt-14">
+                <form onSubmit={handleUpdateProduct} className="mt-14">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
                     <div>
                       <label className="text-base font-medium text-gray-900">
@@ -32,6 +99,7 @@ const UpdateProduct = () => {
                         <input
                           type="text"
                           name="image"
+                          defaultValue={image}
                           id=""
                           placeholder="Enter your image URL"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
@@ -48,6 +116,7 @@ const UpdateProduct = () => {
                         <input
                           type="text"
                           name="name"
+                          defaultValue={name}
                           id=""
                           placeholder="Enter your full name"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
@@ -64,6 +133,7 @@ const UpdateProduct = () => {
                         <input
                           type="text"
                           name="brand"
+                          defaultValue={brand}
                           id=""
                           placeholder="Enter your brand name"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
@@ -80,6 +150,7 @@ const UpdateProduct = () => {
                         <input
                           type="text"
                           name="type"
+                          defaultValue={type}
                           id=""
                           placeholder="Enter your product type"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
@@ -95,6 +166,7 @@ const UpdateProduct = () => {
                         <input
                           type="text"
                           name="price"
+                          defaultValue={price}
                           id=""
                           placeholder="Enter your product price"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
@@ -111,6 +183,7 @@ const UpdateProduct = () => {
                         <input
                           type="text"
                           name="rating"
+                          defaultValue={rating}
                           id=""
                           placeholder="Enter your rating"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"

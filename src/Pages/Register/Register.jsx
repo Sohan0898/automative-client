@@ -61,7 +61,7 @@ const Register = () => {
         <div className="absolute inset-0 bg-gray-900/20"></div>
 
         <div className="relative max-w-xl px-8 md:px-4 mx-auto ">
-          <div className="overflow-hidden bg-white rounded-md shadow-md">
+          <div className="overflow-hidden bg-base-100 rounded-md shadow-md">
             <div className="px-4 py-6 sm:px-8 sm:py-7">
               <div className="text-center">
                 <h2 className="text-3xl font-bold text-gray-900">

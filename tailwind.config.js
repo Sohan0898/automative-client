@@ -6,6 +6,8 @@ export default {
   ],
   theme: {
     extend: {
+
+
       fontFamily: {
         gabarito: ['Gabarito', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
@@ -17,7 +19,10 @@ export default {
         FusionBlue: '#30475E',
         FusionRed: '#F05454',
       },
+
+      
     },
+   
   },
   plugins: [require("daisyui")],
 }

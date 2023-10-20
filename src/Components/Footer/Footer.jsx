@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
         <div>
-            <section className="py-10 bg-base-200 sm:pt-16 lg:pt-24">
+            <section className="py-10 bg-base-100 sm:pt-16 lg:pt-24">
     <div className="max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16">
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
             <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">

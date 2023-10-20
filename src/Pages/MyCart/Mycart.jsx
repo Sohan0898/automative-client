@@ -2,7 +2,7 @@ const Mycart = () => {
   return (
     <div className="max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 my-14 pb-16">
         <h2 className="text-4xl text-center font-bold mb-6">Your cart</h2>
-      <div className="flex flex-col max-w-3xl p-6 mx-auto  space-y-4 sm:p-10 bg-gray-200">
+      <div className="flex flex-col max-w-3xl p-6 mx-auto  space-y-4 sm:p-10 bg-base-100">
         
         <ul className="flex flex-col divide-y divide-gray-700">
           <li className="flex flex-col py-6 sm:flex-row sm:justify-between">

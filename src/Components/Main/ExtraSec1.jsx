@@ -2,7 +2,7 @@
 const ExtraSec1 = () => {
   return (
     <div>
-      <section className="py-10 bg-FusionGray  sm:py-16 lg:py-24">
+      <section className="py-10 bg-base-200  sm:py-16 lg:py-24">
         <div className="max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
@@ -14,7 +14,7 @@ const ExtraSec1 = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-6 px-4 mt-12 sm:px-0 xl:mt-20 xl:grid-cols-4 sm:grid-cols-2">
-            <div className="overflow-hidden bg-white rounded-md">
+            <div className="overflow-hidden bg-base-100 rounded-md">
               <div className="px-5 py-6">
                 <div className="flex items-center justify-between">
                   <img
@@ -48,7 +48,7 @@ const ExtraSec1 = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-md">
+            <div className="overflow-hidden bg-base-100 rounded-md">
               <div className="px-5 py-6">
                 <div className="flex items-center justify-between">
                   <img
@@ -82,7 +82,7 @@ const ExtraSec1 = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-md">
+            <div className="overflow-hidden bg-base-100 rounded-md">
               <div className="px-5 py-6">
                 <div className="flex items-center justify-between">
                   <img
@@ -118,7 +118,7 @@ const ExtraSec1 = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-md">
+            <div className="overflow-hidden bg-base-100 rounded-md">
               <div className="px-5 py-6">
                 <div className="flex items-center justify-between">
                   <img
@@ -154,7 +154,7 @@ const ExtraSec1 = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-md">
+            <div className="overflow-hidden bg-base-100 rounded-md">
               <div className="px-5 py-6">
                 <div className="flex items-center justify-between">
                   <img
@@ -190,7 +190,7 @@ const ExtraSec1 = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-md">
+            <div className="overflow-hidden bg-base-100 rounded-md">
               <div className="px-5 py-6">
                 <div className="flex items-center justify-between">
                   <img
@@ -224,7 +224,7 @@ const ExtraSec1 = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-md">
+            <div className="overflow-hidden bg-base-100 rounded-md">
               <div className="px-5 py-6">
                 <div className="flex items-center justify-between">
                   <img
@@ -260,7 +260,7 @@ const ExtraSec1 = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-md">
+            <div className="overflow-hidden bg-base-100 rounded-md">
               <div className="px-5 py-6">
                 <div className="flex items-center justify-between">
                   <img

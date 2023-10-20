@@ -2,9 +2,12 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import Theme from "../../Theme/Theme";
+
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
+  
 
   const handleLogOut = () => {
     logOut()
@@ -14,20 +17,20 @@ const Navber = () => {
 
   const navMenu = (
     <>
-      <li>
-        <NavLink to={"/"}>Home</NavLink>
+      <li className="btn hover:bg-FusionRed hover:text-white">
+        <NavLink  to={"/"}>Home</NavLink>
       </li>
       {user && (
         <>
-          <li>
-            <NavLink to={"/addProduct"}>Add Product</NavLink>
+          <li className="btn hover:bg-FusionRed hover:text-white">
+            <NavLink  to={"/addProduct"}>Add Product</NavLink>
           </li>
-          <li>
+          <li className="btn hover:bg-FusionRed hover:text-white">
             <NavLink to={"/myCart"}>My Cart</NavLink>
           </li>
         </>
       )}
-      <li>
+      <li className="btn hover:bg-FusionRed hover:text-white">
         <NavLink to={"/register"}>Register</NavLink>
       </li>
     </>
@@ -38,7 +41,7 @@ const Navber = () => {
       <div className="navbar bg-base-200 gap-20">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label tabIndex={0} className="btn  btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -64,9 +67,16 @@ const Navber = () => {
           <Logo></Logo>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navMenu}</ul>
+          <ul className=" menu-horizontal px-1">{navMenu}</ul>
         </div>
         <div className="navbar-end">
+        <div className="Navber">
+          
+        </div>
+          {/* darkmode toggle */}
+          <div className="mr-5 flex items-center">
+          <Theme></Theme>
+            </div>
           <div className="dropdown dropdown-end">
             {user ? (
               <>

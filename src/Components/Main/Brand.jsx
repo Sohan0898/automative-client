@@ -13,8 +13,8 @@ const lodedBrands = useLoaderData();
         </div> 
      <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-center gap-12">
      {
-        lodedBrands?.map(brand => (
-            <BrandCards key={brand.id} brand={brand}></BrandCards>
+        lodedBrands?.map(brands => (
+            <BrandCards key={brands._id} brands={brands}></BrandCards>
         ))
      }
      </div>
