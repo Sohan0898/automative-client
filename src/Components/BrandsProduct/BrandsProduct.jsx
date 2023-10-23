@@ -1,15 +1,10 @@
-
 import Slider from "./Slider";
 import ProductCard from "./ProductCard";
-import { useLoaderData} from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const BrandsProduct = () => {
+  const product = useLoaderData();
 
-const product = useLoaderData();
-
-// console.log(product);
-
-  
   return (
     <div className=" ">
       <div className="max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 mt-10  ">
@@ -19,7 +14,7 @@ const product = useLoaderData();
         <section className="py-10 bg-base-100 sm:py-16 lg:py-24">
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div className="text-center">
-              <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl font-bold leading-tight  sm:text-4xl lg:text-5xl">
                 {product.length} Cars are available here
               </h2>
 
@@ -37,7 +32,7 @@ const product = useLoaderData();
                 <a
                   href="#"
                   title=""
-                  className="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-black transition-all duration-200 bg-transparent border border-black rounded-md sm:w-auto hover:bg-black hover:text-white focus:bg-black focus:text-white"
+                  className="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold  transition-all duration-200 bg-transparent border  rounded-md sm:w-auto hover:bg-black hover:text-white focus:bg-black focus:text-white"
                   role="button"
                 >
                   <svg
@@ -61,17 +56,25 @@ const product = useLoaderData();
           </div>
         </section>
       </div>
-      
-      {product.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4 max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 my-10">
+
+      {product.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4 max-w-screen-2xl mx-auto px-6 md:px-6 lg:px-16 my-10">
           {product.map((product) => (
             <ProductCard key={product._id} product={product}></ProductCard>
           ))}
-          </div> )  : (
-          <div className="min-h-[40vh] w-auto text-center">
-            <img className="h-[400px] mx-auto" src="https://i.ibb.co/Fx7ZLsB/Untitled-design-1.png" alt="" />
-            <p className="text-2xl lg:text-4xl font-bold pb-14 ">Products are not available right now!!! </p></div>
-        )}
-      
+        </div>
+      ) : (
+        <div className="min-h-[40vh] w-auto text-center">
+          <img
+            className="h-[400px] mx-auto"
+            src="https://i.ibb.co/Fx7ZLsB/Untitled-design-1.png"
+            alt=""
+          />
+          <p className="text-2xl lg:text-4xl font-bold pb-14 ">
+            Products are not available right now!!!{" "}
+          </p>
+        </div>
+      )}
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { signUpWithEmail } = useContext(AuthContext);
@@ -33,11 +34,21 @@ const Register = () => {
     signUpWithEmail(email, password)
       .then((result) => {
         console.log(result.user);
+
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => console.log("Updated name and photo"))
+          .catch((error) => {
+            console.error(error);
+          });
+
         e.target.reset();
         Swal.fire({
           position: "top-bottom",
           icon: "success",
-          title: "You Successfully Registered",
+          title: "You Successfully Register",
           showConfirmButton: false,
           timer: 1500,
         });
@@ -64,9 +75,7 @@ const Register = () => {
           <div className="overflow-hidden bg-base-100 rounded-md shadow-md">
             <div className="px-4 py-6 sm:px-8 sm:py-7">
               <div className="text-center">
-                <h2 className="text-3xl font-bold text-gray-900">
-                  Create an account
-                </h2>
+                <h2 className="text-3xl font-bold">Create an account</h2>
                 <p className="mt-2 text-base text-gray-600">
                   Already joined?{" "}
                   <Link to={"/login"}>
@@ -80,38 +89,33 @@ const Register = () => {
               <form onSubmit={handleRegister} className="mt-8 ">
                 <div className="space-y-5">
                   <div>
-                    <label className="text-base font-medium text-gray-900">
-                      {" "}
-                      Name{" "}
-                    </label>
+                    <label className="text-base font-medium "> Name </label>
                     <div className="mt-2.5">
                       <input
                         type="text"
                         name="name"
                         id=""
+                        required
                         placeholder="Enter your full name"
-                        className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                        className="block w-full p-4  placeholder-gray-500 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                       />
                     </div>
                   </div>
                   <div>
-                    <label className="text-base font-medium text-gray-900">
-                      {" "}
-                      Photo{" "}
-                    </label>
+                    <label className="text-base font-medium "> Photo </label>
                     <div className="mt-2.5">
                       <input
                         type="text"
-                        name="Photo"
+                        name="photo"
                         id=""
                         placeholder="Enter your photo URL"
-                        className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                        className="block w-full p-4  placeholder-gray-500 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-base font-medium text-gray-900">
+                    <label className="text-base font-medium ">
                       {" "}
                       Email address{" "}
                     </label>
@@ -121,23 +125,20 @@ const Register = () => {
                         name="email"
                         required
                         placeholder="Enter email to get started"
-                        className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                        className="block w-full p-4  placeholder-gray-500 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-base font-medium text-gray-900">
-                      {" "}
-                      Password{" "}
-                    </label>
+                    <label className="text-base font-medium "> Password </label>
                     <div className="mt-2.5">
                       <input
                         type="password"
                         name="password"
                         required
                         placeholder="Enter your password"
-                        className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                        className="block w-full p-4  placeholder-gray-500 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                       />
                     </div>
                   </div>

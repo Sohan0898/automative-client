@@ -10,7 +10,6 @@ import {
 } from "firebase/auth";
 import app from "../Firebase/firebase.init";
 
-
 export const AuthContext = createContext(null);
 
 const auth = getAuth(app);

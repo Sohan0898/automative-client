@@ -5,11 +5,14 @@ const ExtraSec1 = () => {
       <section className="py-10 bg-base-200  sm:py-16 lg:py-24">
         <div className="max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-bold leading-tight  sm:text-4xl lg:text-5xl">
               What our customers say
             </h2>
             <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">
-            Customers love FusionX for its wide selection of cars, from luxury to high-performance. With top-notch customer service and knowledgeable staff, FusionX is where automotive dreams come true. Discover your ideal ride today
+              Customers love <span className="text-FusionRed">FusionX</span> for
+              its wide selection of cars, from luxury to high-performance. With
+              top-notch customer service and knowledgeable staff, FusionX is
+              where automotive dreams come true. Discover your ideal ride today
             </p>
           </div>
 
@@ -23,7 +26,7 @@ const ExtraSec1 = () => {
                     alt=""
                   />
                   <div className="min-w-0 ml-3 mr-auto">
-                    <p className="text-base font-semibold text-black truncate">
+                    <p className="text-base font-semibold  truncate">
                       Darrell Steward
                     </p>
                     <p className="text-sm text-gray-600 truncate">@darrels</p>
@@ -40,8 +43,10 @@ const ExtraSec1 = () => {
                   </a>
                 </div>
                 <blockquote className="mt-5">
-                  <p className="text-base text-gray-800">
-                  FusionX offers the finest selection of cars I've ever seen. Their customer service is top-notch, and the buying process was a breeze. I'm loving my new ride!
+                  <p className="text-base text-gray-600">
+                    FusionX offers the finest selection of cars I've ever seen.
+                    Their customer service is top-notch, and the buying process
+                    was a breeze. I'm loving my new ride!
                     <span className="block text-sky-500">#CarHeaven</span>
                   </p>
                 </blockquote>
@@ -57,7 +62,7 @@ const ExtraSec1 = () => {
                     alt=""
                   />
                   <div className="min-w-0 ml-3 mr-auto">
-                    <p className="text-base font-semibold text-black truncate">
+                    <p className="text-base font-semibold  truncate">
                       Leslie Alexander
                     </p>
                     <p className="text-sm text-gray-600 truncate">@lesslie</p>
@@ -74,8 +79,10 @@ const ExtraSec1 = () => {
                   </a>
                 </div>
                 <blockquote className="mt-5">
-                  <p className="text-base text-gray-800">
-                  FusionX has an impressive range of luxury cars. I found my dream car here. The only reason for not giving 5 stars is that it took a bit longer than expected to get the delivery.
+                  <p className="text-base text-gray-600">
+                    FusionX has an impressive range of luxury cars. I found my
+                    dream car here. The only reason for not giving 5 stars is
+                    that it took a bit longer than expected to get the delivery.
                     <span className="block text-sky-500">#DreamCars</span>
                   </p>
                 </blockquote>
@@ -91,7 +98,7 @@ const ExtraSec1 = () => {
                     alt=""
                   />
                   <div className="min-w-0 ml-3 mr-auto">
-                    <p className="text-base font-semibold text-black truncate">
+                    <p className="text-base font-semibold  truncate">
                       Jenny Wilson
                     </p>
                     <p className="text-sm text-gray-600 truncate">
@@ -110,8 +117,9 @@ const ExtraSec1 = () => {
                   </a>
                 </div>
                 <blockquote className="mt-5">
-                  <p className="text-base text-gray-800">
-                  I've been a car enthusiast for years, and FusionX never disappoints. Their collection of sports cars is outstanding. 
+                  <p className="text-base text-gray-600">
+                    I've been a car enthusiast for years, and FusionX never
+                    disappoints. Their collection of sports cars is outstanding.
                     <span className="block text-sky-500">#sportsCars</span>
                   </p>
                 </blockquote>
@@ -127,7 +135,7 @@ const ExtraSec1 = () => {
                     alt=""
                   />
                   <div className="min-w-0 ml-3 mr-auto">
-                    <p className="text-base font-semibold text-black truncate">
+                    <p className="text-base font-semibold  truncate">
                       Kristin Watson
                     </p>
                     <p className="text-sm text-gray-600 truncate">
@@ -146,9 +154,13 @@ const ExtraSec1 = () => {
                   </a>
                 </div>
                 <blockquote className="mt-5">
-                  <p className="text-base text-gray-800">
-                  Great place to buy an electric car. FusionX has a good variety, and I appreciate their commitment to sustainability.
-                    <span className="block text-sky-500">#ElectricVehicles</span>
+                  <p className="text-base text-gray-600">
+                    Great place to buy an electric car. FusionX has a good
+                    variety, and I appreciate their commitment to
+                    sustainability.
+                    <span className="block text-sky-500">
+                      #ElectricVehicles
+                    </span>
                   </p>
                 </blockquote>
               </div>
@@ -163,7 +175,7 @@ const ExtraSec1 = () => {
                     alt=""
                   />
                   <div className="min-w-0 ml-3 mr-auto">
-                    <p className="text-base font-semibold text-black truncate">
+                    <p className="text-base font-semibold  truncate">
                       Guy Hawkins
                     </p>
                     <p className="text-sm text-gray-600 truncate">
@@ -182,8 +194,10 @@ const ExtraSec1 = () => {
                   </a>
                 </div>
                 <blockquote className="mt-5">
-                  <p className="text-base text-gray-800">
-                  If you're in the market for a high-performance vehicle, FusionX is the place to go. I got my McLaren here, and it's been an exhilarating experience. No complaints! 
+                  <p className="text-base text-gray-600">
+                    If you're in the market for a high-performance vehicle,
+                    FusionX is the place to go. I got my McLaren here, and it's
+                    been an exhilarating experience. No complaints!
                     <span className="block text-sky-500">#HighPerformance</span>
                   </p>
                 </blockquote>
@@ -199,7 +213,7 @@ const ExtraSec1 = () => {
                     alt=""
                   />
                   <div className="min-w-0 ml-3 mr-auto">
-                    <p className="text-base font-semibold text-black truncate">
+                    <p className="text-base font-semibold  truncate">
                       Marvin McKinney
                     </p>
                     <p className="text-sm text-gray-600 truncate">@darrels</p>
@@ -216,8 +230,10 @@ const ExtraSec1 = () => {
                   </a>
                 </div>
                 <blockquote className="mt-5">
-                  <p className="text-base text-gray-800">
-                  FusionX offers a diverse range of cars for every budget. I found a great deal on a family car. The sales team was helpful, but there was a minor delay in the paperwork. 
+                  <p className="text-base text-gray-600">
+                    FusionX offers a diverse range of cars for every budget. I
+                    found a great deal on a family car. The sales team was
+                    helpful, but there was a minor delay in the paperwork.
                     <span className="block text-sky-500">#AffordableCars</span>
                   </p>
                 </blockquote>
@@ -233,7 +249,7 @@ const ExtraSec1 = () => {
                     alt=""
                   />
                   <div className="min-w-0 ml-3 mr-auto">
-                    <p className="text-base font-semibold text-black truncate">
+                    <p className="text-base font-semibold  truncate">
                       Annette Black
                     </p>
                     <p className="text-sm text-gray-600 truncate">@darrels</p>
@@ -250,7 +266,7 @@ const ExtraSec1 = () => {
                   </a>
                 </div>
                 <blockquote className="mt-5">
-                  <p className="text-base text-gray-800">
+                  <p className="text-base text-gray-600">
                     You made it so simple. My new site is so much faster and
                     easier to work with than my old site. I just choose the
                     page, make the change and click save.
@@ -269,7 +285,7 @@ const ExtraSec1 = () => {
                     alt=""
                   />
                   <div className="min-w-0 ml-3 mr-auto">
-                    <p className="text-base font-semibold text-black truncate">
+                    <p className="text-base font-semibold  truncate">
                       Floyd Miles
                     </p>
                     <p className="text-sm text-gray-600 truncate">@darrels</p>
@@ -286,7 +302,7 @@ const ExtraSec1 = () => {
                   </a>
                 </div>
                 <blockquote className="mt-5">
-                  <p className="text-base text-gray-800">
+                  <p className="text-base text-gray-600">
                     My new site is so much faster and easier to work with than
                     my old site. I just choose the page, make the change and
                     click save.

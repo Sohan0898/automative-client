@@ -33,9 +33,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
-
     const email = form.get("email");
-
     const password = form.get("password");
     console.log(email, password);
 
@@ -51,7 +49,7 @@ const Login = () => {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "You Successfully Signed",
+          title: "You Successfully Login",
           showConfirmButton: false,
           timer: 1500,
         });
@@ -65,9 +63,9 @@ const Login = () => {
 
   return (
     <div>
-      <section className="bg-white">
+      <section className="bg-base-100">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="relative flex items-end px-4 pb-10 pt-60 sm:pb-16 md:justify-center lg:pb-24 bg-gray-50 sm:px-6 lg:px-8">
+          <div className="relative flex items-end px-4 pb-10 pt-60 sm:pb-16 md:justify-center lg:pb-24 bg-base-100 sm:px-6 lg:px-8">
             <div className="absolute inset-0">
               <img
                 className="object-cover object-top w-full h-full"
@@ -171,7 +169,7 @@ const Login = () => {
 
           <div className="flex items-center justify-center px-6 py-12 bg-base-300 lg:px-8 lg:py-24">
             <div className="xl:w-full xl:max-w-sm 2xl:max-w-md xl:mx-auto ">
-              <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
+              <h2 className="text-3xl font-bold leading-tight  sm:text-4xl">
                 Sign in to Fusion<span className="text-FusionRed">X</span>
               </h2>
               <p className="mt-2 text-base text-gray-600">
@@ -186,7 +184,7 @@ const Login = () => {
               <form onSubmit={handleLogin} className="mt-8">
                 <div className="space-y-5">
                   <div>
-                    <label className="text-base font-medium text-gray-900">
+                    <label className="text-base font-medium ">
                       {" "}
                       Email address{" "}
                     </label>
@@ -213,14 +211,14 @@ const Login = () => {
                         name="email"
                         required
                         placeholder="Enter email to get started"
-                        className="block w-full py-4 pl-10 pr-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
+                        className="block w-full py-4 pl-10 pr-4  placeholder-base-1000 transition-all duration-200 border border-gray-200 rounded-md bg-base-100 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                       />
                     </div>
                   </div>
 
                   <div>
                     <div className="flex items-center justify-between">
-                      <label className="text-base font-medium text-gray-900">
+                      <label className="text-base font-medium ">
                         {" "}
                         Password{" "}
                       </label>
@@ -258,7 +256,7 @@ const Login = () => {
                         id=""
                         required
                         placeholder="Enter your password"
-                        className="block w-full py-4 pl-10 pr-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
+                        className="block w-full py-4 pl-10 pr-4  placeholder-base-1000 transition-all duration-200 border border-gray-200 rounded-md bg-base-100 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                       />
                     </div>
                   </div>
@@ -282,7 +280,7 @@ const Login = () => {
                 <button
                   onClick={handleGoogleSignIn}
                   type="button"
-                  className="relative inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-gray-700 transition-all duration-200 bg-white border-2 border-gray-200 rounded-md hover:bg-gray-100 focus:bg-gray-100 hover:text-black focus:text-black focus:outline-none"
+                  className="relative inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold transition-all duration-200 bg-base-100 border-2 border-gray-200 rounded-md hover:bg-gray-100 focus:bg-gray-100 hover: focus: focus:outline-none"
                 >
                   <div className="absolute inset-y-0 left-0 p-4">
                     <svg
@@ -299,7 +297,7 @@ const Login = () => {
 
                 <button
                   type="button"
-                  className="relative inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-gray-700 transition-all duration-200 bg-white border-2 border-gray-200 rounded-md hover:bg-gray-100 focus:bg-gray-100 hover:text-black focus:text-black focus:outline-none"
+                  className="relative inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold  transition-all duration-200 bg-base-100 border-2 border-gray-200 rounded-md hover:bg-gray-100 focus:bg-gray-100 hover: focus: focus:outline-none"
                 >
                   <div className="absolute inset-y-0 left-0 p-4">
                     <svg

@@ -5,17 +5,15 @@ const AddProduct = () => {
   const [brandOptions, setBrandOptions] = useState([]);
   const [brand, setBrand] = useState("");
 
-  
   useEffect(() => {
-
-    fetch("http://localhost:5000/brands") 
+    fetch(" https://automative-server-site.vercel.app/brands")
       .then((response) => response.json())
       .then((data) => {
         setBrandOptions(data);
         console.log(data);
       })
       .catch((error) => {
-        console.error("Error fetching brand options:", error);
+        console.error(error);
       });
   }, []);
 
@@ -44,7 +42,7 @@ const AddProduct = () => {
 
     console.log(newProduct);
 
-    fetch("http://localhost:5000/products", {
+    fetch(" https://automative-server-site.vercel.app/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,20 +56,21 @@ const AddProduct = () => {
           Swal.fire({
             position: "top-end",
             icon: "success",
-            title: "Your product has been added",
+            title: "Product has been added",
             showConfirmButton: false,
             timer: 1500,
           });
+          form.reset();
         }
       });
   };
 
   return (
     <div>
-      <section className="py-10 bg-white sm:py-16 lg:py-24">
+      <section className="py-10 bg-base-100 sm:py-16 lg:py-24">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
               Add Fusion<span className="text-FusionRed">X</span> Product
             </h2>
             <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-500">
@@ -82,7 +81,7 @@ const AddProduct = () => {
           </div>
 
           <div className="max-w-5xl mx-auto mt-12 sm:mt-16">
-            <div className="mt-6 overflow-hidden bg-white rounded-xl">
+            <div className="mt-6 overflow-hidden bg-base-200 rounded-xl">
               <div className="px-6 py-12 sm:p-12">
                 <h3 className="text-3xl font-semibold text-center text-FusionRed">
                   Add Your Available Product
@@ -91,39 +90,33 @@ const AddProduct = () => {
                 <form onSubmit={handleAddProduct} className="mt-14">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
                     <div>
-                      <label className="text-base font-medium text-gray-900">
-                        {" "}
-                        Image
-                      </label>
+                      <label className="text-base font-medium "> Image</label>
                       <div className="mt-2.5 relative">
                         <input
                           type="text"
                           name="image"
                           id=""
                           placeholder="Enter your image URL"
-                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
+                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="text-base font-medium text-gray-900">
-                        {" "}
-                        Name{" "}
-                      </label>
+                      <label className="text-base font-medium "> Name </label>
                       <div className="mt-2.5 relative">
                         <input
                           type="text"
                           name="name"
                           id=""
                           placeholder="Enter your full name"
-                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
+                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="text-base font-medium text-gray-900">
+                      <label className="text-base font-medium ">
                         Brand Name
                       </label>
                       <div className="mt-2.5 relative">
@@ -131,7 +124,7 @@ const AddProduct = () => {
                           name="brand"
                           value={brand}
                           onChange={(e) => setBrand(e.target.value)}
-                          className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
+                          className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
                         >
                           <option value="">Select a brand</option>
                           {brandOptions?.map((option) => (
@@ -144,62 +137,52 @@ const AddProduct = () => {
                     </div>
 
                     <div>
-                      <label className="text-base font-medium text-gray-900">
-                        {" "}
-                        Type
-                      </label>
+                      <label className="text-base font-medium "> Type</label>
                       <div className="mt-2.5 relative">
                         <input
                           type="text"
                           name="type"
                           id=""
                           placeholder="Enter your product type"
-                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
+                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
                         />
                       </div>
                     </div>
                     <div>
-                      <label className="text-base font-medium text-gray-900">
-                        {" "}
-                        Price
-                      </label>
+                      <label className="text-base font-medium "> Price</label>
                       <div className="mt-2.5 relative">
                         <input
                           type="text"
                           name="price"
                           id=""
                           placeholder="Enter your product price"
-                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
+                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
                         />
                       </div>
                     </div>
                     <div>
-                      <label className="text-base  font-medium text-gray-900">
-                        {" "}
-                        Short Description
-                      </label>
-                      <div className="mt-2.5 relative">
-                        <input
-                          type="text"
-                          name="description"
-                          id=""
-                          placeholder="Enter your product description"
-                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
-                        />
-                      </div>
-                    </div>
-                    <div className="md:col-span-2">
-                      <label className="text-base font-medium text-gray-900">
-                        {" "}
-                        Rating
-                      </label>
+                      <label className="text-base  font-medium "> Rating</label>
                       <div className="mt-2.5 relative">
                         <input
                           type="text"
                           name="rating"
                           id=""
-                          placeholder="Enter your rating"
-                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
+                          placeholder="Enter your product rating"
+                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:col-span-2">
+                      <label className="text-base font-medium ">
+                        Short Description{" "}
+                      </label>
+                      <div className="mt-2.5 relative">
+                        <textarea
+                          type="text"
+                          name="description"
+                          id=""
+                          placeholder="Enter your product description"
+                          className="block w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-base-100 border border-gray-200 rounded-md focus:outline-none focus:border-red-600 caret-red-600"
                         />
                       </div>
                     </div>

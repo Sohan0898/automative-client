@@ -4,10 +4,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import Theme from "../../Theme/Theme";
 
-
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
-  
 
   const handleLogOut = () => {
     logOut()
@@ -18,12 +16,12 @@ const Navber = () => {
   const navMenu = (
     <>
       <li className="btn hover:bg-FusionRed hover:text-white">
-        <NavLink  to={"/"}>Home</NavLink>
+        <NavLink to={"/"}>Home</NavLink>
       </li>
       {user && (
         <>
           <li className="btn hover:bg-FusionRed hover:text-white">
-            <NavLink  to={"/addProduct"}>Add Product</NavLink>
+            <NavLink to={"/addProduct"}>Add Product</NavLink>
           </li>
           <li className="btn hover:bg-FusionRed hover:text-white">
             <NavLink to={"/myCart"}>My Cart</NavLink>
@@ -31,13 +29,16 @@ const Navber = () => {
         </>
       )}
       <li className="btn hover:bg-FusionRed hover:text-white">
+        <NavLink to={"/gallery"}>Gallery</NavLink>
+      </li>
+      <li className="btn hover:bg-FusionRed hover:text-white">
         <NavLink to={"/register"}>Register</NavLink>
       </li>
     </>
   );
 
   return (
-    <div className=" max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 ">
+    <div className=" max-w-screen-2xl mx-auto px-2 py-3 md:px-6 lg:px-16 ">
       <div className="navbar bg-base-200 gap-20">
         <div className="navbar-start">
           <div className="dropdown">
@@ -70,13 +71,11 @@ const Navber = () => {
           <ul className=" menu-horizontal px-1">{navMenu}</ul>
         </div>
         <div className="navbar-end">
-        <div className="Navber">
-          
-        </div>
+          <div className="Navber"></div>
           {/* darkmode toggle */}
           <div className="mr-5 flex items-center">
-          <Theme></Theme>
-            </div>
+            <Theme></Theme>
+          </div>
           <div className="dropdown dropdown-end">
             {user ? (
               <>
@@ -85,7 +84,7 @@ const Navber = () => {
                   className="btn btn-ghost btn-circle avatar ring ring-FusionRed online  "
                 >
                   <div className="w-10 rounded-full">
-                    {user.photoURL ? (
+                    {user?.photoURL ? (
                       <img src={user?.photoURL} />
                     ) : (
                       <img
@@ -101,7 +100,7 @@ const Navber = () => {
                 >
                   <div className="w-full px-2 ">
                     <p className="text-sm capitalize font-medium pb-2">
-                      {user.displayName ? user.displayName : "Anonymous User"}
+                      {user?.displayName ? user.displayName : "Anonymous User"}
                     </p>
 
                     <p className="text-sm font-medium pb-2 ">{user.email}</p>
