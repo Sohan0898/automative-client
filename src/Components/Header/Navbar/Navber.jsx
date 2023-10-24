@@ -102,15 +102,13 @@ const Navber = () => {
                     <p className="text-sm capitalize font-medium pb-2">
                       {user?.displayName ? user.displayName : "Anonymous User"}
                     </p>
-
                     <p className="text-sm font-medium pb-2 ">{user.email}</p>
                   </div>
-
                   <a
                     onClick={handleLogOut}
                     className="btn text-white focus:outline-none font-bold bg-FusionRed hover:bg-FusionRed  focus:ring-FusionRed w-full rounded-lg  px-5 py-2 mr-2 mb-2"
                   >
-                    Sign out
+                    Sign Out
                   </a>
                 </ul>
               </>
