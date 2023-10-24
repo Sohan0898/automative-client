@@ -81,7 +81,7 @@ const Navber = () => {
               <>
                 <label
                   tabIndex={0}
-                  className="btn btn-ghost btn-circle avatar ring ring-FusionRed online  "
+                  className="btn btn-ghost btn-circle avatar md:ring ring-FusionRed md:online  "
                 >
                   <div className="w-10 rounded-full">
                     {user?.photoURL ? (
@@ -116,7 +116,7 @@ const Navber = () => {
               </>
             ) : (
               <Link to={"/login"}>
-                <button className="btn focus:outline-none text-white  font-bold bg-FusionRed hover:bg-FusionRed  focus:ring-FusionRed  rounded-lg  px-5 py-2 mr-2 mb-2">
+                <button className=" btn btn-circle  md:btn-block text-xsm md:text-base focus:outline-none text-white  font-bold bg-FusionRed hover:bg-FusionRed  focus:ring-FusionRed  md:rounded-lg p-3 md:px-5 md:py-2 md:mr-2 md:mb-2">
                   Sign In
                 </button>
               </Link>
