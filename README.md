@@ -12,6 +12,6 @@ In this automative cilent , The system enables user registration via email or Go
 - Customize Theme: User can toggle between dark and light themes.
 
 # Technology :
-- Reactsjs, react-router dom, material-ui, nodejs, express, mongodb database.
+- Reactsjs, react-router dom, nodejs, express, mongodb database.
 
 Live link: https://fusionx-e952e8.netlify.app
