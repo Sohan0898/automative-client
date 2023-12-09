@@ -1,5 +1,7 @@
 # Overview : 
+In this automative cilent , The system enables user registration via email or Google, allowing them to manage automotive products, including brands and detailed information. Users can easily navigate a secure platform, customize themes, and access their profiles for a personalized experience.
 
+# Features : 
 - User Registration and Login: Users can create accounts with email and password or through additional log in options like Google.
 - Product Management: Users can add and update automotive products with details such as images, names, brands, types, prices, and ratings.
 - Brand Management: Products are organized by automotive brands, enabling users to view brand-specific product collections.
