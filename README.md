@@ -11,4 +11,7 @@ In this automative cilent , The system enables user registration via email or Go
 - Authentication and Security: The project ensures user data security by enforcing password complexity and handling authentication and authorization for private routes.
 - Customize Theme: User can toggle between dark and light themes.
 
+# Technology :
+- Reactsjs, react-router dom, material-ui, nodejs, express, mongodb database.
+
 Live link: https://fusionx-e952e8.netlify.app
